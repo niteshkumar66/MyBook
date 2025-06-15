@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MyBook-Contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    #search{
+      width: 800px;
+      height: 40px;
+    }
+     h3{
+      font-weight: 700;
+    }
+    h1,h5{
+      color: #1c5fda;
+    }
+     /* Contact Us Section */
+    section#contact-us {
+      padding: 48px 0;
+      margin: 0 100px;
+    }
+    form.contact-form {
+      max-width: 480px;
+      background: #fafafa;
+      padding: 24px;
+      border: 1px solid #222;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 6px;
+      color: #222;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      transition: border-color 0.3s ease;
+      resize: vertical;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      border-color: #007185;
+      outline: none;
+      box-shadow: 0 0 5px #007185aa;
+    }
+    textarea {
+      min-height: 120px;
+    }
+    button[type="submit"] {
+      background-color: #007185;
+      color: white;
+      padding: 14px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+    button[type="submit"]:hover,
+    button[type="submit"]:focus {
+      background-color: #005f63;
+      outline: none;
+    }
+    .form-message {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #007185;
+      padding-top: 12px;
+    }
+        /* About Us Section */
+    section#about-us {
+      padding: 48px 0;
+    }
+    section#about-us p {
+      max-width: 100%;
+      font-size: 1.125rem;
+      color: #222;
+      line-height: 1.8;
+    }
+        /* Footer */
+    footer {
+      background: #222;
+      color: #ddd;
+      padding: 48px 16px 24px;
+      font-size: 0.9rem;
+    }
+    footer .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 32px;
+    }
+    footer .footer-section {
+      min-width: 200px;
+      flex: 1 1 200px;
+    }
+    footer h3 {
+      font-size: 1.25rem;
+      margin-bottom: 16px;
+      color: #fff;
+      font-weight: 700;
+    }
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    footer ul li + li {
+      margin-top: 12px;
+    }
+    footer ul li a {
+      color: #bbb;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    footer ul li a:hover,
+    footer ul li a:focus {
+      color: #fff;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">  
+      <img src="Book2.png" alt="" width="150"  class="d-inline-block align-text-top">
+    </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto fs-5">
+
+            <form id="search" class="d-flex" role="search" >
+            <input class="form-control me-2" type="search" placeholder="Search by Book,Author,Publisher" aria-label="Search" />   
+            <button class="btn btn-outline-light" type="search">Search</button>       
+            </form>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+              <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Books
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Featured Book</a></li>
+                <li><a class="dropdown-item" href="#">Best Sellers</a></li>
+                <li><a class="dropdown-item" href="#">New Arrivals</a></li>
+                <li><a class="dropdown-item" href="#">Award Winners</a></li>
+                <li><a class="dropdown-item" href="#">Indian Languages</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Motorola</a></li>
+              </ul>
+            </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="coming_soon.html">Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="Login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+   <section id="contact-us" tabindex="0" aria-label="Contact MyBook">
+      <h1><b>Contact Us</b></h1>
+      <form class="contact-form" id="contactForm" aria-describedby="formMessage" novalidate>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" autocomplete="name" required aria-required="true" aria-describedby="nameError" />
+        <span id="nameError" role="alert" style="color:#d93025; display:none;">Please enter your name.</span>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" autocomplete="email" required aria-required="true" aria-describedby="emailError" />
+        <span id="emailError" role="alert" style="color:#d93025; display:none;">Please enter a valid email address.</span>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required aria-required="true" aria-describedby="messageError"></textarea>
+        <span id="messageError" role="alert" style="color:#d93025; display:none;">Please enter your message.</span>
+
+        <button type="submit" >Send Message</button>
+        <div id="formMessage" role="status" aria-live="polite" class="form-message" style="display:none;"></div>
+      </form>
+    </section>
+  </main>
+
+  <main class="container" role="main">
+    <section id="about-us" tabindex="0" aria-label="About MyBook">
+      
+      <h1 align="center">Privacy & Security</h1>
+      <a name="Privacy"></a>
+      <p>At "MyBook", we value your trust and are committed to protecting your privacy and securing your personal information. This Privacy & Security Policy outlines how we collect, use, and safeguard your data when you use our website and services.</p>
+
+      <h5><b> 1. Information We Collect</b></h5>
+
+<p>When you use MyBook, we may collect the following types of information:</p>
+
+<p><b>Personal Information:</b> Name, email address, phone number, shipping/billing address, and payment details.
+<p><b>Account Information:</b> Username, password, and order history.</p>
+<p><b>Browsing Data:</b> IP address, browser type, device information, and usage data collected via cookies and similar technologies</p>
+
+<h5><b>2. How We Use Your Information</b>
+</h5>
+<p>Your information is used to:</p>
+<p>Process and fulfill your orders</p>
+<p>Communicate with you regarding purchases, updates, or support</p>
+<p>Personalize your shopping experience</p>
+<p>Improve our website and services</p>
+<p>Send promotional offers (only if you opt in)</p>
+
+<h5><b>3. Data Security</b></h5>
+
+<p>We implement a variety of industry-standard security measures to protect your personal information, including:</p>
+
+<p>SSL encryption for secure transactions
+</p>
+<p>Secure payment gateways</p>
+<p>Regular security audits and monitoring
+</p>
+<p>Access control and authentication measures for sensitive data</p>
+
+<h5><b>4. Sharing of Information</b></h5>
+
+<p>We do "not sell" or rent your personal data. We may share information only with trusted third parties who assist us in operating our website or servicing you, such as:</p>
+
+<p> Payment processors</p>
+<p>Shipping partners</p>
+<p>Email service providers</p>
+
+<p>All such partners are required to maintain the confidentiality and security of your information.</p>
+
+<h5><b>5. Your Rights & Choices</b></h5>
+
+<p>You have the right to:</p>
+
+<p>Access and update your personal information</p>
+<p>Opt out of marketing communications at any time</p>
+<p>Request deletion of your account and data</p>
+
+<p>To exercise these rights, contact us at <a href="mailto:privacy@mybook.com">Mail to MyBook</a></p>
+
+<h5><b>6. Cookies & Tracking</b></h5>
+
+<p>We use cookies to enhance your experience, analyze site usage, and provide personalized content. You can manage your cookie preferences in your browser settings.</p>
+
+<h5><b>7. Children's Privacy</b></h5>
+
+<p>MyBook does not knowingly collect information from individuals under the age of 13. If we become aware of such data, it will be deleted promptly.</p>
+
+<h5><b>8. Policy Updates</b></h5>
+
+<p>We may update this Privacy & Security Policy from time to time. We encourage you to review it periodically. Continued use of our website after changes means you accept those updates.</p>
+
+<h5><b>9. Contact Us</b></h5>
+
+<p>If you have questions about this policy or your data, please contact us at:</p>
+
+<p>📧 <a href="mailto:privacy@mybook.com">Mail to MyBook</a></p>
+<p>📍 MyBook HQ, 123 Book Lane, Reading City, RC 10001</p>
+
+<p>Let me know if you'd like this adapted to meet GDPR, CCPA, or other specific compliance needs.</p>
+</p>
+    </section>
+</main>
+
+  <!-- Footer -->
+  <footer>
+           <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-section" aria-label="About MyBook links">
+        <h3>About Us</h3>
+        <ul>
+          <li><a href="About.html">Our Story</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-section" aria-label="Contact links">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><a href="ContactUs.html">Customer Service</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Privacy & Security</a></li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+      </div>
+      <div class="footer-section" aria-label="Other links and social media">
+        <h3>More</h3>
+        <ul>
+          <li><a href="#">Gift Cards</a></li>
+          <li><a href="#">Affiliate Program</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+        
+      </div>
+    </div>
+  </footer>
+    </div>
+  </footer>
+
+</body>
+</html>
